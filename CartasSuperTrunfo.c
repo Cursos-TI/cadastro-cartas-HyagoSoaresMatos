@@ -14,7 +14,7 @@ int main() {
   printf("CARTA 1 \n");
 
   printf("Digite o Nome do Estado: \n");
-  fgets(Estado, 50, stdin);
+  scanf("%s", Estado);
 
   printf("Digite os Pontos turisticos: \n");
   scanf("%d", &Pontosturisticos);
@@ -51,8 +51,8 @@ int main() {
   printf("-A Pib é de: %f \n", Pib);
   
   printf(" \n");
-  printf("-O Nome do Estado e: %s \n", Estado);
   printf("-CARTA 2 \n");
+  printf("-O Nome do Estado e: %s \n", Estado);
   printf("-Pontos turisticos: %d \n" ,Pontosturisticos);
   printf("-A Populacao e: %.3f \n" ,Populacao);
 
