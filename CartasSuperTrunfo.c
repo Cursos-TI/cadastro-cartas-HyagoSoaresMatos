@@ -1,61 +1,89 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
-  // Área para definição das variáveis para armazenar as propriedades das cidades
-  int Pontosturisticos;
-  float Populacao, Area, Pib = 0;
-  char Estado[50];
 
-  // Área para entrada de dados
-  printf("CARTA 1 \n");
+    // ===== CARTA 1 =====
+    char codigo1[5], estado1[50];
+    int pontos1;
+    float pop1, area1, pib1;
+    float densidade1, pibpc1;
 
-  printf("Digite o Nome do Estado: \n");
-  scanf("%s", Estado);
+    // ===== CARTA 2 =====
+    char codigo2[5], estado2[50];
+    int pontos2;
+    float pop2, area2, pib2;
+    float densidade2, pibpc2;
 
-  printf("Digite os Pontos turisticos: \n");
-  scanf("%d", &Pontosturisticos);
+    // ===== ENTRADA CARTA 1 =====
+    printf("=== CARTA 1 ===\n");
 
-  printf("Digite a populacao: \n");
-  scanf("%f", &Populacao);
+    printf("Codigo (ex: A01): ");
+    scanf("%s", codigo1);
 
-  printf("Digite a Pib: \n");
-  scanf("%f", &Pib);
+    printf("Estado: ");
+    scanf(" %[^\n]", estado1);
 
-  printf("Digite a Area do Estado: \n");
-  scanf("%f", &Area);
+    printf("Populacao: ");
+    scanf("%f", &pop1);
 
-  printf("CARTA 2 \n");
+    printf("Area: ");
+    scanf("%f", &area1);
 
-  printf("Digite o Nome do Estado: \n");
-  scanf("%s", Estado);
+    printf("PIB: ");
+    scanf("%f", &pib1);
 
-  printf("Digite os Pontos turisticos: \n");
-  scanf("%d", &Pontosturisticos);
+    printf("Pontos Turisticos: ");
+    scanf("%d", &pontos1);
 
-  printf("Digite a populacao: \n");
-  scanf("%f", &Populacao);
+    // cálculos
+    densidade1 = pop1 / area1;
+    pibpc1 = pib1 / pop1;
 
+    // ===== ENTRADA CARTA 2 =====
+    printf("\n=== CARTA 2 ===\n");
 
+    printf("Codigo (ex: B02): ");
+    scanf("%s", codigo2);
 
-  // Área para exibição dos dados da cidade
-  printf(" \n");
-  printf("-CARTA 1 \n");
-  printf("-O Nome do Estado e: %s \n", Estado);
-  printf("-Pontos turisticos: %d \n" ,Pontosturisticos);
-  printf("-A Populacao e: %.3f \n" ,Populacao);
-  printf("-A Area é de: %.3f \n", Area);
-  printf("-A Pib é de: %f \n", Pib);
-  
-  printf(" \n");
-  printf("-CARTA 2 \n");
-  printf("-O Nome do Estado e: %s \n", Estado);
-  printf("-Pontos turisticos: %d \n" ,Pontosturisticos);
-  printf("-A Populacao e: %.3f \n" ,Populacao);
+    printf("Estado: ");
+    scanf(" %[^\n]", estado2);
 
+    printf("Populacao: ");
+    scanf("%f", &pop2);
 
-return 0;
-} 
+    printf("Area: ");
+    scanf("%f", &area2);
+
+    printf("PIB: ");
+    scanf("%f", &pib2);
+
+    printf("Pontos Turisticos: ");
+    scanf("%d", &pontos2);
+
+    // cálculos
+    densidade2 = pop2 / area2;
+    pibpc2 = pib2 / pop2;
+
+    // ===== SAÍDA =====
+    printf("\n===== CARTA 1 =====\n");
+    printf("Codigo: %s\n", codigo1);
+    printf("Estado: %s\n", estado1);
+    printf("Populacao: %.3f\n", pop1);
+    printf("Area: %.3f\n", area1);
+    printf("PIB: %.5f\n", pib1);
+    printf("Pontos Turisticos: %d\n", pontos1);
+    printf("Densidade: %.2f\n", densidade1);
+    printf("PIB per capita: %.2f\n", pibpc1);
+
+    printf("\n===== CARTA 2 =====\n");
+    printf("Codigo: %s\n", codigo2);
+    printf("Estado: %s\n", estado2);
+    printf("Populacao: %.3f\n", pop2);
+    printf("Area: %.3f\n", area2);
+    printf("PIB: %.5f\n", pib2);
+    printf("Pontos Turisticos: %d\n", pontos2);
+    printf("Densidade: %.2f\n", densidade2);
+    printf("PIB per capita: %.2f\n", pibpc2);
+
+    return 0;
+}
